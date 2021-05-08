@@ -57,9 +57,7 @@ species_type get_species(const int index)
 static const char * Species_Abbrev_List[NUM_SPECIES] =
 {
       "Hu", "HE", "DE",
-#if TAG_MAJOR_VERSION == 34
       "SE",
-#endif
       "Ha", "HO", "Ko", "Mu", "Na", "Og", "Tr",
       // the draconians
       "Dr", "Dr", "Dr", "Dr", "Dr", "Dr", "Dr", "Dr", "Dr", "Dr",
@@ -67,9 +65,6 @@ static const char * Species_Abbrev_List[NUM_SPECIES] =
       "Fe", "Op", "Dj", "LO", "Gr",
       // placeholders
       "El", "HD", "OM", "GE", "Gn", "MD",
-#if TAG_MAJOR_VERSION > 34
-      "SE",
-#endif
 };
 
 const char *get_species_abbrev(species_type which_species)

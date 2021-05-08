@@ -36,7 +36,6 @@ Character
     - Gargoyles are immune to involuntary petrification, but can petrify
       themselves to significantly reduce damage before becoming completely
       immobile.
-* Sludge elves are no more.
 * The Skald background gets a reworked spellbook with four new spells:
     - Infusion grants additional melee damage costing MP with each strike;
     - Song of Slaying grants an incremental slaying bonus with every monster
