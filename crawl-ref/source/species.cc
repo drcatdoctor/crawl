@@ -19,7 +19,7 @@
 static species_type species_order[] = {
     // comparatively human-like looks
     SP_HUMAN,          SP_HIGH_ELF,
-    SP_DEEP_ELF,
+    SP_DEEP_ELF,       SP_SLUDGE_ELF,
     SP_DEEP_DWARF,     SP_HILL_ORC,
     SP_LAVA_ORC,       SP_MERFOLK,
     // small species
@@ -158,9 +158,7 @@ string species_name(species_type speci, bool genus, bool adj)
             {
             case SP_HIGH_ELF:   res = "High Elf";   break;
             case SP_DEEP_ELF:   res = "Deep Elf";   break;
-#if TAG_MAJOR_VERSION == 34
             case SP_SLUDGE_ELF: res = "Sludge Elf"; break;
-#endif
             default:            res = "Elf";        break;
             }
         }

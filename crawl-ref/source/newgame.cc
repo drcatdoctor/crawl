@@ -156,8 +156,24 @@ static void _print_character_info(const newgame_def* ng)
 static bool _is_species_valid_choice(species_type species)
 {
     // Non-base draconians cannot be selected either.
-    return is_valid_species(species)
-        && !(species >= SP_RED_DRACONIAN && species < SP_BASE_DRACONIAN);
+    if (species >= SP_RED_DRACONIAN && species < SP_BASE_DRACONIAN)
+        return false;
+
+    return true;
+}
+
+// Determines if a job is valid.
+static bool _is_job_valid_choice(job_type job)
+{
+    if (job < 0 || job > NUM_JOBS)
+        return false;
+
+#if TAG_MAJOR_VERSION == 34
+    if (job == JOB_STALKER || job == JOB_JESTER)
+        return false;
+#endif
+
+    return true;
 }
 
 #ifdef ASSERTS
@@ -994,7 +1010,7 @@ static void _construct_backgrounds_menu(const newgame_def* ng,
             "Zealot",
             coord_def(15, 0), 20,
             {JOB_BERSERKER, JOB_ABYSSAL_KNIGHT, JOB_CHAOS_KNIGHT,
-             JOB_DEATH_KNIGHT, JOB_HEALER, JOB_UNKNOWN, JOB_UNKNOWN,
+             JOB_DEATH_KNIGHT, JOB_PRIEST, JOB_HEALER, JOB_UNKNOWN,
              JOB_UNKNOWN, JOB_UNKNOWN}
         },
         {

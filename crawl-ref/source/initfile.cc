@@ -386,11 +386,6 @@ static species_type _str_to_species(const string &str)
         ret = SP_UNKNOWN;
     }
 
-#if TAG_MAJOR_VERSION == 34
-    if (ret == SP_SLUDGE_ELF)
-        ret = SP_UNKNOWN;
-#endif
-
     if (ret == SP_UNKNOWN)
         fprintf(stderr, "Unknown species choice: %s\n", str.c_str());
 
@@ -422,6 +417,11 @@ static job_type _str_to_job(const string &str)
     // if we don't have a match, scan the full names
     if (job == JOB_UNKNOWN)
         job = get_job_by_name(str.c_str());
+
+#if TAG_MAJOR_VERSION == 34
+    if (job == JOB_STALKER || job == JOB_JESTER)
+        job = JOB_UNKNOWN;
+#endif
 
     // This catches JOB_UNKNOWN as well as removed jobs.
     if (!is_job_valid_choice(job))
