@@ -25,9 +25,6 @@
 [submodule "crawl-ref/source/contrib/sdl"]
 	path = crawl-ref/source/contrib/sdl
 	url = https://github.com/crawl/crawl-sdl.git
-[submodule "crawl-ref/source/contrib/sdl-android"]
-	path = crawl-ref/source/contrib/sdl-android
-	url = https://github.com/crawl/crawl-sdl-android.git
 [submodule "crawl-ref/source/contrib/sdl-image"]
 	path = crawl-ref/source/contrib/sdl-image
 	url = https://github.com/crawl/crawl-sdl-image.git
