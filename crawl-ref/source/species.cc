@@ -61,15 +61,17 @@ species_type get_species(const int index)
 
 static const char * Species_Abbrev_List[NUM_SPECIES] =
 {
+      // this list needs to be in the same order as enum species_type
+
       "Hu", 
       "HE", "DE", "SE",
       "Ha", "HO", "Ko", "Mu", "Na", "Og", "Tr",
       // the draconians
       "Dr", "Dr", "Dr", "Dr", "Dr", "Dr", "Dr", "Dr", "Dr", "Dr",
       "Ce", "Dg", "Sp", "Mi", "Ds", "Gh", "Te", "Mf", "Vp", "DD",
-      "Fe", "Op", "Dj", "LO", "Gr",
+      "Fe", "Op", "Dj", "LO", "Gr", "MD",
       // placeholders
-      "El", "HD", "OM", "GE", "Gn", "MD",
+      "El", "HD", "OM", "GE", "Gn",
 };
 
 const char *get_species_abbrev(species_type which_species)
