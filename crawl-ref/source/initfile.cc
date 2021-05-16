@@ -417,12 +417,7 @@ static job_type _str_to_job(const string &str)
     // if we don't have a match, scan the full names
     if (job == JOB_UNKNOWN)
         job = get_job_by_name(str.c_str());
-
-#if TAG_MAJOR_VERSION == 34
-    if (job == JOB_STALKER || job == JOB_JESTER)
-        job = JOB_UNKNOWN;
-#endif
-
+        
     // This catches JOB_UNKNOWN as well as removed jobs.
     if (!is_job_valid_choice(job))
         fprintf(stderr, "Unknown background choice: %s\n", str.c_str());
