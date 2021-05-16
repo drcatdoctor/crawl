@@ -162,20 +162,6 @@ static bool _is_species_valid_choice(species_type species)
     return true;
 }
 
-// Determines if a job is valid.
-static bool _is_job_valid_choice(job_type job)
-{
-    if (job < 0 || job > NUM_JOBS)
-        return false;
-
-#if TAG_MAJOR_VERSION == 34
-    if (job == JOB_STALKER || job == JOB_JESTER)
-        return false;
-#endif
-
-    return true;
-}
-
 #ifdef ASSERTS
 static bool _species_is_undead(const species_type speci)
 {
