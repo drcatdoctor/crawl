@@ -18,10 +18,15 @@
 // all living creatures finally the undead. (MM)
 static species_type species_order[] = {
     // comparatively human-like looks
-    SP_HUMAN,          SP_HIGH_ELF,
-    SP_DEEP_ELF,       SP_SLUDGE_ELF,
-    SP_DEEP_DWARF,     SP_HILL_ORC,
-    SP_LAVA_ORC,       SP_MERFOLK,
+    SP_HUMAN,
+    // ... elves
+    SP_HIGH_ELF,       SP_DEEP_ELF,       SP_SLUDGE_ELF,
+    // ... dwarves
+    SP_DEEP_DWARF,     SP_MOUNTAIN_DWARF, 
+    // ... orcs
+    SP_HILL_ORC,       SP_LAVA_ORC,       
+    // ... and this one
+    SP_MERFOLK,
     // small species
     SP_HALFLING,       SP_KOBOLD,
     SP_SPRIGGAN,
@@ -56,8 +61,8 @@ species_type get_species(const int index)
 
 static const char * Species_Abbrev_List[NUM_SPECIES] =
 {
-      "Hu", "HE", "DE",
-      "SE",
+      "Hu", 
+      "HE", "DE", "SE",
       "Ha", "HO", "Ko", "Mu", "Na", "Og", "Tr",
       // the draconians
       "Dr", "Dr", "Dr", "Dr", "Dr", "Dr", "Dr", "Dr", "Dr", "Dr",
@@ -178,6 +183,21 @@ string species_name(species_type speci, bool genus, bool adj)
             }
         }
         break;
+    case GENPC_DWARVISH:
+        if (adj)  // doesn't care about species/genus
+            res = "Dwarven";
+        else if (genus)
+            res = "Dwarf";
+        else
+        {
+            switch (speci)
+            {
+            case SP_DEEP_DWARF:       res = "Deep Dwarf";       break;
+            case SP_MOUNTAIN_DWARF:   res = "Mountain Dwarf";   break;
+            default:                  res = "Dwawrf";           break;
+            }
+        }
+        break;
     case GENPC_NONE:
     default:
         switch (speci)
@@ -193,9 +213,6 @@ string species_name(species_type speci, bool genus, bool adj)
         case SP_TENGU:      res = "Tengu";                             break;
         case SP_GARGOYLE:   res = "Gargoyle";                          break;
 
-        case SP_DEEP_DWARF:
-            res = (adj ? "Dwarven" : genus ? "Dwarf" : "Deep Dwarf");
-            break;
         case SP_FELID:
             res = (adj ? "Feline" : genus ? "Cat" : "Felid");
             break;
@@ -268,6 +285,10 @@ genus_type species_genus(species_type species)
     case SP_HILL_ORC:
     case SP_LAVA_ORC:
         return GENPC_ORCISH;
+
+    case SP_DEEP_DWARF:
+    case SP_MOUNTAIN_DWARF:
+        return GENPC_DWARVISH;
 
     default:
         return GENPC_NONE;
@@ -369,6 +390,8 @@ monster_type player_species_to_mons_species(species_type species)
         return MONS_VAMPIRE;
     case SP_DEEP_DWARF:
         return MONS_DEEP_DWARF;
+    case SP_MOUNTAIN_DWARF:
+        return MONS_DWARF;
     case SP_FELID:
         return MONS_FELID;
     case SP_OCTOPODE:
@@ -377,7 +400,6 @@ monster_type player_species_to_mons_species(species_type species)
         return MONS_DJINNI;
     case SP_ELF:
     case SP_HILL_DWARF:
-    case SP_MOUNTAIN_DWARF:
     case SP_OGRE_MAGE:
     case SP_GREY_ELF:
     case SP_GNOME:
@@ -482,6 +504,7 @@ int species_hp_modifier(species_type species)
     case SP_HILL_ORC:
     case SP_LAVA_ORC:
     case SP_MINOTAUR:
+    case SP_MOUNTAIN_DWARF:
         return 1;
     case SP_DEEP_DWARF:
     case SP_NAGA:
@@ -499,6 +522,7 @@ int species_mp_modifier(species_type species)
     case SP_TROLL:
     case SP_MINOTAUR:
         return -2;
+    case SP_MOUNTAIN_DWARF:
     case SP_CENTAUR:
     case SP_GHOUL:
         return -1;

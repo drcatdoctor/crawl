@@ -1772,7 +1772,7 @@ int melee_attack::player_apply_weapon_bonuses(int damage)
     if (weapon && is_weapon(*weapon) && !is_range_weapon(*weapon))
     {
         if (get_equip_race(*weapon) == ISFLAG_DWARVEN
-            && you.species == SP_DEEP_DWARF)
+            && player_genus(GENPC_DWARVISH))
         {
             damage += random2(3);
         }

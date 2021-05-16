@@ -1876,7 +1876,7 @@ bool throw_it(bolt &pbolt, int throw_2, bool teleport, int acc_bonus,
 
             // Dwarves/orcs with dwarven/orcish weapons.
             if (get_equip_race(item) == ISFLAG_DWARVEN
-                   && you.species == SP_DEEP_DWARF
+                   && player_genus(GENPC_DWARVISH)
                 || get_equip_race(item) == ISFLAG_ORCISH
                    && player_genus(GENPC_ORCISH))
             {

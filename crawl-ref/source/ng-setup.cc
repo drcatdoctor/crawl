@@ -66,6 +66,7 @@ static void _species_stat_init(species_type which_species)
     case SP_SLUDGE_ELF:         sb =  6; ib =  7; db =  7;      break;  // 20
 
     case SP_DEEP_DWARF:         sb =  9; ib =  6; db =  6;      break;  // 21
+    case SP_MOUNTAIN_DWARF:     sb =  9; ib =  4; db =  5;      break;  // 18
 
     case SP_TROLL:              sb = 13; ib =  2; db =  3;      break;  // 18
     case SP_OGRE:               sb = 10; ib =  5; db =  3;      break;  // 18
@@ -1133,7 +1134,7 @@ static void _racialise_starting_equipment()
                 // Now add appropriate species type mod.
                 if (player_genus(GENPC_ELVEN))
                     set_equip_race(you.inv[i], ISFLAG_ELVEN);
-                else if (you.species == SP_DEEP_DWARF)
+                else if (player_genus(GENPC_DWARVISH))
                     set_equip_race(you.inv[i], ISFLAG_DWARVEN);
                 else if (player_genus(GENPC_ORCISH))
                     set_equip_race(you.inv[i], ISFLAG_ORCISH);

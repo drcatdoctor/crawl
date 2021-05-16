@@ -3233,14 +3233,14 @@ enum species_type
     SP_DJINNI,
     SP_LAVA_ORC,
     SP_GARGOYLE,
-      LAST_VALID_SPECIES = SP_GARGOYLE,
+    SP_MOUNTAIN_DWARF,
+      LAST_VALID_SPECIES = SP_MOUNTAIN_DWARF,
 // The high scores viewer still needs enums for removed species.
     SP_ELF,                            // (placeholder)
     SP_HILL_DWARF,                     // (placeholder)
     SP_OGRE_MAGE,                      // (placeholder)
     SP_GREY_ELF,                       // (placeholder)
     SP_GNOME,                          // (placeholder)
-    SP_MOUNTAIN_DWARF,                 // (placeholder)
 
     NUM_SPECIES,                       // always after the last species
 

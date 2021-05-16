@@ -3837,7 +3837,7 @@ static string _pluralise_player_genus()
 {
     string sp = species_name(you.species, true, false);
     if (player_genus(GENPC_ELVEN, you.species)
-        || you.species == SP_DEEP_DWARF)
+        || player_genus(GENPC_DWARVISH, you.species))
     {
         sp = sp.substr(0, sp.find("f"));
         sp += "ves";

@@ -7,6 +7,7 @@ enum genus_type
     GENPC_ELVEN,
     GENPC_ORCISH,
     GENPC_NONE,
+    GENPC_DWARVISH,
 };
 
 genus_type species_genus(species_type species);
