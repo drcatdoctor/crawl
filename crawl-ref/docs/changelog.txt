@@ -1,3 +1,9 @@
+BadCrawl
+--------
+* Mountain Dwarves have been readded.
+* Lava Orcs can worship Beogh, but if they get too hot they radiate onto their 
+  followers and that can be severely problematic.
+
 Stone Soup 0.13 (up to 0.13-a0-1380-g03ef21a)
 ---------------------------------------------
 
