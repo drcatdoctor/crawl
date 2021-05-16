@@ -191,7 +191,7 @@ char_choice_restriction job_allowed(species_type speci, job_type job)
         default:
             return CC_UNRESTRICTED;
         }
- 
+
     case JOB_HEALER:
         switch (speci)
         {
