@@ -261,17 +261,13 @@ gaining control over the demon's realm and thanes. The battle left her with a
 deep facial scar, one that she carries as a badge of honour rather than a
 symbol of shame.
 %%%%
-Frederick
+Adolf
 
-A svelte fighter-mage who wears a gold-rimmed monocle and seeks a suitable and
-worthy opponent. You likely do not fit the bill.
+A passionate fighter-mage with a unique taste in facial hair.
 %%%%
-Frederick:quote
+Adolf:quote
 
-“I thoroughly disapprove of duels. I consider them unwise and I know they are
-dangerous. Also, sinful. If a man should challenge me, I would take him kindly
-and forgivingly by the hand and lead him to a quiet retired spot and kill him.”
-    -Mark Twain, _Autobiography of Mark Twain_. 1924.
+“Life is like a box of chocolates.”
 %%%%
 Fannar
 

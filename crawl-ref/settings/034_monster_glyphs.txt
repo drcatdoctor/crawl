@@ -155,7 +155,7 @@ mon_glyph = large simulacrum : white
 # unique monsters
 mon_glyph = Gloorx Vloq : darkgrey
 mon_glyph = Margery : red
-mon_glyph = Frederick : darkgrey
+mon_glyph = Adolf : darkgrey
 
 
 #########################################################
@@ -297,6 +297,6 @@ mon_glyph = Frederick : darkgrey
 # monster                 old colour     new colour
 # -------                 ----------     ----------
 # unique monsters
-# Frederick               darkgrey       green
+# Adolf                   darkgrey       green
 # Gloorx Vloq             darkgrey       lightgrey
 # Margery                 red            lightred

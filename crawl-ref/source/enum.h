@@ -2545,7 +2545,7 @@ enum monster_type                      // menv[].type
     MONS_WIGLAF,
     MONS_XTAHUA,
     MONS_NORRIS,
-    MONS_FREDERICK,
+    MONS_ADOLF,
     MONS_MARGERY,
     MONS_BORIS,
     MONS_POLYPHEMUS,

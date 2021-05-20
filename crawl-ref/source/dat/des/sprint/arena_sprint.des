@@ -389,7 +389,7 @@ function arena_sprint_get_monster_set(round, boss)
             mon_set = {
                 -- Branches: D, Orc, Elf, Shoals, Swamp, Spider, Snake, Slime,
                 -- Blade, Forest, Dwarf, Crypt, Pan, Tomb, Hell
-                "place:D:27 w:30 / w:1 nikola / w:1 frederick",
+                "place:D:27 w:30 / w:1 nikola / w:1 adolf",
                 "place:Orc:4 / orc sorcerer w:3 / orc knight / orc warlord w:3 /\
                     iron troll w:5 / stone giant w:5 / orc high priest w:4",
                 "deep elf high priest / deep elf demonologist / deep elf annihilator /\
@@ -430,7 +430,7 @@ function arena_sprint_get_monster_set(round, boss)
                 "yaktaur w:15 / yaktaur captain w:5",
                 "ugly thing w:15 / w:15 very ugly thing / w:1 kirke",
                 "ogre mage / w:5 deep elf mage / vampire mage / naga mage /\
-                    lich / w:5 ancient lich / w:1 frederick",
+                    lich / w:5 ancient lich / w:1 adolf",
                 "hill giant / stone giant / w:5 frost giant / w:5 fire giant /\
                     w:1 titan",
                 "dragon / ice dragon / storm dragon / w:5 shadow dragon /\

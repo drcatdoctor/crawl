@@ -1215,7 +1215,7 @@ KMONS:  5 = nikola, deep elf annihilator
 : else
 MONS:   w:4 deep elf conjurer / w:2 wizard / w:2 spriggan air mage / w:2 deep elf annihilator
 MONS:   w:2 deep elf annihilator / w:1 draconian annihilator
-KMONS:  5 = frederick, boris, draconian annihilator
+KMONS:  5 = adolf, boris, draconian annihilator
 : end
 MONS:   fire vortex
 NSUBST: G = 1:1 / 1:1G / *:G

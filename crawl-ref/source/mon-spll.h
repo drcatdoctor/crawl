@@ -1461,7 +1461,7 @@
       }
     },
 
-    {  MST_FREDERICK,
+    {  MST_ADOLF,
       {
        SPELL_ISKENDERUNS_MYSTIC_BLAST,
        SPELL_BOLT_OF_COLD,

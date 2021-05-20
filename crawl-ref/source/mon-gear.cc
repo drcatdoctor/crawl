@@ -1113,7 +1113,7 @@ static item_make_species_type _give_weapon(monster* mon, int level,
 
     case MONS_HELL_KNIGHT:
     case MONS_MAUD:
-    case MONS_FREDERICK:
+    case MONS_ADOLF:
     case MONS_MARGERY:
         force_item = true;
         item.base_type = OBJ_WEAPONS;
@@ -2194,7 +2194,7 @@ static void _give_armour(monster* mon, int level, bool spectral_orcs)
         item.sub_type  = random_choose(ARM_RING_MAIL,   ARM_SCALE_MAIL, -1);
         break;
 
-    case MONS_FREDERICK:
+    case MONS_ADOLF:
         item.base_type = OBJ_ARMOUR;
         item.sub_type  = random_choose(ARM_SCALE_MAIL,   ARM_CHAIN_MAIL, -1);
         break;

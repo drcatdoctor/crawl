@@ -3992,31 +3992,31 @@ w:1
 
 @The_monster@ says, "I will defeat you, of this I have no doubt!" @player_only@
 %%%%
-############ FREDERICK ### A mercenary guarding the dungeon
-Frederick
+############ ADOLF ### A mercenary guarding the dungeon
+Adolf
 
-@_Frederick_common_@
+@_Adolf_common_@
 
 w:5
-@_Frederick_rare_@
+@_Adolf_rare_@
 %%%%
-Beogh Frederick
+Beogh Adolf
 
 w:2
 @The_monster@ says, "You didn't bring enough reinforcements. Come back later!"
 
 w:30
-@Frederick@
+@Adolf@
 %%%%
-Okawaru Frederick
+Okawaru Adolf
 
 w:2
 @The_monster@ says, "Pah! Those who rely on gods for strength get nowhere in life."
 
 w:30
-@Frederick@
+@Adolf@
 %%%%
-_Frederick_common_
+_Adolf_common_
 
 VISUAL:@The_monster@ pines for a worthy opponent.
 
@@ -4038,7 +4038,7 @@ VISUAL:@The_monster@ yawns in an exaggerated manner.
 
 @The_monster@ says @to_foe@, "Why should I even bother fighting the likes of you?"
 %%%%
-_Frederick_rare_
+_Adolf_rare_
 
 VISUAL:@The_monster@ polishes @possessive@ monocle.
 
