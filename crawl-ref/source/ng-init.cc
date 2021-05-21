@@ -33,6 +33,7 @@
 static uint8_t _random_potion_description()
 {
     int desc;
+    int colour;
 
     do
     {
