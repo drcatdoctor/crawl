@@ -102,7 +102,7 @@ bool is_job_valid_choice(job_type job)
 {
     return is_valid_job(job)
 #if TAG_MAJOR_VERSION == 34
-        && job != JOB_STALKER && job != JOB_JESTER
+        && job != JOB_STALKER
 #endif
         ;
 }
