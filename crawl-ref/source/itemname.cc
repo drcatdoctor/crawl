@@ -657,6 +657,7 @@ static const char* potion_type_name(int potiontype)
     case POT_PORRIDGE:          return "porridge";
     case POT_DEGENERATION:      return "degeneration";
     case POT_DECAY:             return "decay";
+    case POT_WATER:             return "water";
     case POT_EXPERIENCE:        return "experience";
     case POT_MAGIC:             return "magic";
     case POT_RESTORE_ABILITIES: return "restore abilities";
@@ -2288,10 +2289,6 @@ void check_item_knowledge(bool unknown_items)
             // Potions of fizzing liquid are not something that
             // need to be identified, because they never randomly
             // generate! [due]
-            if (i == OBJ_POTIONS && j == POT_FIZZING)
-                continue;
-
-#if TAG_MAJOR_VERSION == 34
             // Water is never interesting either. [1KB]
             if (i == OBJ_POTIONS
                 && (j == POT_WATER
@@ -2310,7 +2307,6 @@ void check_item_knowledge(bool unknown_items)
 
             if (i == OBJ_STAVES && j == STAFF_CHANNELING)
                 continue;
-#endif
 
             if (unknown_items ? you.type_ids[i][j] != ID_KNOWN_TYPE
                               : you.type_ids[i][j] == ID_KNOWN_TYPE)
@@ -3244,6 +3240,7 @@ bool is_useless_item(const item_def &item, bool temp)
             return you.permanent_flight();
 
         case POT_PORRIDGE:
+        case POT_WATER:
         case POT_BLOOD:
         case POT_BLOOD_COAGULATED:
             return !can_ingest(item, true, false) || you.species == SP_DJINNI;

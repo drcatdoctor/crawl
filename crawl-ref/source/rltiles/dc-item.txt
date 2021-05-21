@@ -904,7 +904,7 @@ i-stasis AMU_STASIS AMU_ID_LAST
 
 ####################OBJ_POTIONS
 %sdir item/potion
-unknown POTION_OFFSET UNSEEN_POTION
+clear POTION_OFFSET UNSEEN_POTION
 brilliant_blue
 black
 silver
@@ -940,8 +940,7 @@ i-invisibility POT_INVISIBILITY
 i-porridge POT_PORRIDGE
 i-degeneration POT_DEGENERATION
 i-decay POT_DECAY
-# please remove when TAG_MAJOR_VERSION is bumped
-i-fizzing POT_REMOVE_ME
+i-water POT_WATER
 i-experience POT_EXPERIENCE
 i-magic POT_MAGIC
 i-restore-abilities POT_RESTORE_ABILITIES
@@ -952,8 +951,7 @@ i-mutation POT_MUTATION
 i-resistance POT_RESISTANCE
 i-blood POT_BLOOD
 i-coagulated-blood POT_BLOOD_COAGULATED
-i-fizzing POT_FIZZING
-i-good-mutation POT_BENEFICIAL_MUTATION POT_ID_LAST
+i-water POT_FIZZING POT_ID_LAST
 %back none
 %rim 1
 
